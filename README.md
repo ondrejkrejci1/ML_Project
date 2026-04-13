@@ -21,13 +21,12 @@ Make sure you have Python 3.9 or newer installed.
 ### **2\. Instalace knihoven**
 
 In the project’s root directory, open a terminal and install the necessary dependencies:  
-Bash
 
 `pip install pandas scikit-learn streamlit joblib numpy`
 
 ### **3\. Data Preparation**
 
-Make sure you have a file named data\_complete.csv in the data/ folder. You can edit the file paths and the list of disciplines in config.json.
+Make sure you have a file named `data\_complete.csv` in the `data/` folder. You can edit the file paths and the list of disciplines in config.json.
 
 ### 
 
@@ -35,8 +34,7 @@ Make sure you have a file named data\_complete.csv in the data/ folder. You can 
 
 You run the app using the Streamlit framework in the console:
 
-Bash  
-streamlit run app.py
+`streamlit run app.py`
 
 ## **Struktura projektu**
 
