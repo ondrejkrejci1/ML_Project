@@ -36,7 +36,7 @@ You run the app using the Streamlit framework in the console:
 
 `streamlit run app.py`
 
-## **Struktura projektu**
+## **Structure of project**
 
 ML\_Project/  
 ├── data/  
