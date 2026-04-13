@@ -43,7 +43,7 @@ streamlit run app.py
 ML\_Project/  
 ├── data/  
 ├── saved\_models/  
-├── core/  
+├── src/  
 │   ├── data\_loader.py  
 │   ├── ml\_engine.py  
 │   └── view.py  
