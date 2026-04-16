@@ -18,7 +18,7 @@ The application addresses a real-world problem faced by athletes and coaches—h
 
 Make sure you have Python 3.9 or newer installed.
 
-### **2\. Instalace knihoven**
+### **2\. Installing libraries**
 
 In the project’s root directory, open a terminal and install the necessary dependencies:  
 
