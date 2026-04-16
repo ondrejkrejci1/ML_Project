@@ -12,7 +12,7 @@ The application addresses a real-world problem faced by athletes and coaches—h
 * **Ensemble Learning:** The system does not use a single model but averages the results of 10 independently trained models for maximum stability and error elimination.  
 * **Intelligent Caching:** Trained models are serialized to disk. When the same combination of disciplines is selected again, the model loads instantly without the need for retraining.
 
-### **Data Collecting & Preparation***
+### **Data Collecting & Preparation**
 The training data for this project was gathered using a custom-built Python web scraper. The data was extracted directly from decathlon2000.com, a comprehensive portal dedicated to recording, displaying, and informing about the world of decathlon.
 
 Once the raw data was collected, it underwent a rigorous cleaning and transformation process to ensure the highest possible accuracy and reliability of the machine learning model. First, all records containing incomplete data or 'DNF' (Did Not Finish) flags were completely removed from the dataset. Following this, a strict outlier filter was applied to prevent the model from learning from impossible anomalies or typographical errors in the source data. Specifically, any record containing a performance better than the all-time decathlon world best for that specific event was discarded.
