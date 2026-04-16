@@ -10,12 +10,12 @@ class DataLoader:
             self.config = json.load(f)
 
         self.file_path = self.config.get('data_path', 'data/data_complete.csv')
-        self.required_columns = self.config.get('disciplines', []) + ['Points']
+        self.required_columns = self.config.get('features', []) + ['Points']
         self.data = None
 
     def load_and_clean_data(self):
         if not os.path.exists(self.file_path):
-            raise FileNotFoundError(f"Critical error: The file '{self.file_path}' was not found!")
+            raise FileNotFoundError(f"Critical error: The file '{self.file_path}' was not found! Check configuration file if everything defined correctly.")
 
         df = pd.read_csv(self.file_path)
 

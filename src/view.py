@@ -10,7 +10,7 @@ class DecathlonView:
         with open(config_path, 'r', encoding='utf-8') as f:
             self.config = json.load(f)
 
-        self.all_disciplines = self.config.get('disciplines', [])
+        self.all_disciplines = self.config.get('features', [])
         self.default_values = {
             '100m': 11.50, 'Long_Jump': 7.00, 'Shot_Put': 13.50, 'High_Jump': 1.95, '400m': 50.00,
             '110m_Hurdles': 15.00, 'Discus': 40.00, 'Pole_Vault': 4.50, 'Javelin': 55.00, '1500m': 280.00
@@ -21,7 +21,7 @@ class DecathlonView:
 
     def initialize_state(self):
         if 'active_disciplines' not in st.session_state:
-            st.session_state.active_disciplines = ['100m', 'Long_Jump', 'Shot_Put']
+            st.session_state.active_disciplines = ['100m', 'Long_Jump', 'Shot_Put', 'High_Jump', '400m']
 
     def render_discipline_manager(self):
         st.subheader("Discipline Management")
@@ -32,8 +32,8 @@ class DecathlonView:
             if available_to_add:
                 add_choice = st.selectbox("Select a discipline to add:", available_to_add)
                 if st.button("Add a discipline"):
-                    if len(st.session_state.active_disciplines) >= 5:
-                        st.warning("You cannot add any more! The maximum is 5 events.")
+                    if len(st.session_state.active_disciplines) >= 8:
+                        st.warning("You cannot add any more! The maximum is 8 events.")
                     else:
                         st.session_state.active_disciplines.append(add_choice)
                         st.rerun()
@@ -41,8 +41,8 @@ class DecathlonView:
         with col2:
             remove_choice = st.selectbox("Select the discipline to remove:", st.session_state.active_disciplines)
             if st.button("Remove discipline"):
-                if len(st.session_state.active_disciplines) <= 3:
-                    st.warning("Cannot be removed! A minimum of 3 events is required. First, add an event, and then remove this one.")
+                if len(st.session_state.active_disciplines) <= 5:
+                    st.warning("Cannot be removed! A minimum of 5 events is required. First, add an event, and then remove this one.")
                 else:
                     st.session_state.active_disciplines.remove(remove_choice)
                     st.rerun()
@@ -141,7 +141,7 @@ class DecathlonView:
         self.initialize_state()
 
         st.title("AI Decathlon Predictor")
-        st.write("Enter at least 3 and no more than 5 events. The AI will estimate your total score!")
+        st.write("Enter at least 5 and no more than 8 events. The AI will estimate your total score!")
         st.divider()
 
         self.render_discipline_manager()

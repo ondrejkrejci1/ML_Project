@@ -1,7 +1,7 @@
 {
     "data_path": "data/data_complete.csv",
     "models_dir": "saved_models",
-    "disciplines": [
+    "features": [
         "100m", "Long_Jump", "Shot_Put", "High_Jump", "400m",
         "110m_Hurdles", "Discus", "Pole_Vault", "Javelin", "1500m"
     ]
