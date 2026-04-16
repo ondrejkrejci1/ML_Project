@@ -26,7 +26,7 @@ In the project’s root directory, open a terminal and install the necessary dep
 
 ### **3\. Data Preparation**
 
-Make sure you have a file named `data\_complete.csv` in the `data/` folder. You can edit the file paths and the list of disciplines in config.json.
+Make sure you have a file named `data_complete.csv` in the `data/` folder. You can edit the file paths and the list of disciplines in config.json.
 
 ### 
 
