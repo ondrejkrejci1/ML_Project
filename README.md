@@ -8,7 +8,7 @@ The application addresses a real-world problem faced by athletes and coaches—h
 
 ### **Key Features:**
 
-* **Dynamic Discipline Selection:** The user can select 3 to 5 disciplines on which to base the prediction.  
+* **Dynamic Discipline Selection:** The user can select 5 to 8 disciplines on which to base the prediction.  
 * **Ensemble Learning:** The system does not use a single model but averages the results of 10 independently trained models for maximum stability and error elimination.  
 * **Intelligent Caching:** Trained models are serialized to disk. When the same combination of disciplines is selected again, the model loads instantly without the need for retraining.
 
