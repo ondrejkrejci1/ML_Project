@@ -53,5 +53,8 @@ ML\_Project/
 ├── config.json  
 └── app.py
 
+## Complete Documentation
+For detailed information on the software architecture, how the regression model works, data collection methods, and a complete list of test scenarios, please refer to the file Dokumentace ML Projektu- Krejci.pdf. You will also find a detailed analysis of how the application behaves in edge cases and error conditions.
+
 
 
