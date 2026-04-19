@@ -75,11 +75,19 @@ class DecathlonView:
                 )
                 user_inputs[disc] = val
 
-        return user_inputs
+        sorted_order = ['100m', 'Long_Jump', 'Shot_Put', 'High_Jump', '400m', '110m_Hurdles', 'Discus', 'Pole_Vault', 'Javelin', '1500m']
+
+        sorted_inputs = {}
+
+        for disc in sorted_order:
+            if disc in user_inputs:
+                sorted_inputs[disc] = user_inputs[disc]
+
+        return sorted_inputs
 
     def render_prediction_action(self, user_inputs):
         if st.button("Create a model and predict points", use_container_width=True, type="primary"):
-            with st.spinner('Analyzing the data and train AI models (10-Model Tournament)...'):
+            with st.spinner('Analyzing the data and train AI models'):
                 try:
                     data = self.data_loader.get_data()
                     predicted_points = self.model_manager.predict_score(data, user_inputs)
